@@ -1,9 +1,9 @@
-//import Hero from './_components/Hero'
+import Hero from './_components/Hero'
 
 export default function HomePage() {
   return (
     <main>
-      {/* <Hero /> */}
+      <Hero />
     </main>
   )
 }

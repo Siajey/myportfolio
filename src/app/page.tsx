@@ -3,7 +3,7 @@ import Quote from './_components/Quote'
 import Projects from './_components/Projects'
 import Skills from './_components/Skills'
 import AboutMe from './_components/AboutMe'
-//import Contacts from './_components/Contacts'
+import Contacts from './_components/Contacts'
 
 export default function HomePage() {
   return (
@@ -13,7 +13,7 @@ export default function HomePage() {
       <Projects />
       <Skills />
       <AboutMe />
-      {/* <Contacts /> */}
+      <Contacts />
     </main>
   )
 }

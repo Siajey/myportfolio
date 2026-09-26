@@ -1,28 +1,27 @@
 import { GitBranch, Mail, Send } from 'lucide-react'
 import clsx from 'clsx'
+import { socialLinks } from '@/data/social-links.data'
 
 interface SocialSidebarProps {
   className?: string
 }
 
-const socialLinks = [
-  {
-    id: 1,
-    name: 'Github',
-    href: 'https://github.com/Siajey',
-    icon: GitBranch,
-  },
-  { id: 2, name: 'Email', href: 'mailto:siavashmjyjs@gmail.com', icon: Mail },
-  { id: 3, name: 'Telegram', href: 'https://t.me/SiavashMohammadjani', icon: Send },
+const items = [
+  { id: 1, name: 'Github', href: socialLinks.github, icon: GitBranch },
+  { id: 2, name: 'Email', href: socialLinks.email, icon: Mail },
+  { id: 3, name: 'Telegram', href: socialLinks.telegram, icon: Send },
 ]
 
 export default function SocialSidebar({ className }: SocialSidebarProps) {
   return (
     <div
-      className={clsx('hidden w-fit flex-col items-center gap-4 lg:flex', className)}
+      className={clsx(
+        'hidden w-fit flex-col items-center gap-4 lg:flex',
+        className,
+      )}
     >
       <span className='h-16 w-px bg-gray/30' />
-      {socialLinks.map((item) => {
+      {items.map((item) => {
         const Icon = item.icon
         return (
           <a
@@ -40,5 +39,6 @@ export default function SocialSidebar({ className }: SocialSidebarProps) {
     </div>
   )
 }
+
 
 

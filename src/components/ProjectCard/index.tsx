@@ -27,6 +27,19 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <h3 className='truncate text-lg font-semibold text-white'>{project.title}</h3>
         <ExpandableText text={project.description} className='flex-1' />
 
+        {project.caseStudy && (
+          <div className='space-y-2 border-t border-gray/20 pt-3 text-xs'>
+            <p className='text-gray'>
+              <span className='font-semibold text-primary'>Problem: </span>
+              {project.caseStudy.problem}
+            </p>
+            <p className='text-gray'>
+              <span className='font-semibold text-primary'>Impact: </span>
+              {project.caseStudy.impact}
+            </p>
+          </div>
+        )}
+
         <div className='mt-2 flex gap-2'>
           {project.liveUrl && (
             <Link

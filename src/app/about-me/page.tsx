@@ -6,6 +6,7 @@ import DotGrid from '@/components/ui/DotGrid'
 import SectionHeading from '@/components/ui/SectionHeading'
 import { skillsData } from '@/data/skills.data'
 import Experience from '@/app/_components/Experience'
+import GithubActivity from '@/app/_components/GithubActivity'
 
 export const metadata: Metadata = {
   title: 'About | Jey',
@@ -38,6 +39,10 @@ export default function AboutMePage() {
             در حال حاضر، علاوه بر فرانت‌اند، در حال یادگیری مباحث بک‌اند، نحوه
             دیپلوی پروژه‌ها، و اصول اولیه امنیت وب هستم تا بتونم پروژه‌ها رو از
             ابتدا تا انتها خودم مدیریت کنم.
+          </p>
+
+          <p className='mt-4 text-gray'>
+            خارج از کدنویسی هم گیمر هستم.
           </p>
 
           <a
@@ -81,6 +86,7 @@ export default function AboutMePage() {
         </div>
       </div>
       <Experience />
+      <GithubActivity />
     </main>
   )
 }

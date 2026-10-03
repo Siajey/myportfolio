@@ -1,7 +1,11 @@
-export default function ProjectsSkeleton() {
+interface ProjectsSkeletonProps {
+  count?: number
+}
+
+export default function ProjectsSkeleton({ count = 3 }: ProjectsSkeletonProps) {
   return (
     <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {Array.from({ length: 3 }).map((_, index) => (
+      {Array.from({ length: count }).map((_, index) => (
         <div key={index} className="animate-pulse border border-gray/20">
           <div className="aspect-video bg-gray/10" />
           <div className="space-y-3 p-4">

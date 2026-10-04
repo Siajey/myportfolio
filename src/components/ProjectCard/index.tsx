@@ -9,12 +9,13 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className='flex cursor-pointer flex-col border border-gray/20'>
+    <div className='flex min-w-0 cursor-pointer flex-col border border-gray/20'>
       <div className='relative aspect-video bg-gray/10'>
         <Image
           src={project.imageUrl}
           alt={project.title}
           fill
+          unoptimized
           className='object-cover'
         />
       </div>

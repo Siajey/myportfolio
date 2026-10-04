@@ -3,7 +3,7 @@ import Link from 'next/link'
 import SectionHeading from '@/components/ui/SectionHeading'
 import DotGrid from '@/components/ui/DotGrid'
 import ProjectsList from './ProjectsList'
-import ProjectsSkeleton from './ProjectsSkeleton'
+import ProjectsSkeleton from '@/components/ProjectsSkeleton'
 
 export default function Projects() {
   return (

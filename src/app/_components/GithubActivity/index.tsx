@@ -1,28 +1,46 @@
 import SectionHeading from '@/components/ui/SectionHeading'
 import { socialLinks } from '@/data/social-links.data'
+import { getContributionCalendar } from '@/services/github/github.service'
 
-// یوزرنیم گیتهاب رو از لینک پروفایل (socialLinks.github) استخراج می‌کنیم
-// تا فقط یک جای کد (social-links.data.ts) مسئول این مقدار باشه.
 const githubUsername = socialLinks.github.split('/').filter(Boolean).pop()
 
-export default function GithubActivity() {
+function getLevelClass(count: number): string {
+  if (count === 0) return 'bg-gray/10'
+  if (count <= 2) return 'bg-primary/30'
+  if (count <= 5) return 'bg-primary/60'
+  return 'bg-primary'
+}
+
+export default async function GithubActivity() {
   if (!githubUsername) return null
+
+  const calendar = await getContributionCalendar(githubUsername)
+
+  if (!calendar) return null
 
   return (
     <div className='mt-20'>
       <SectionHeading title='github-activity' />
 
-      <div className='overflow-x-auto border border-gray/20 p-4'>
-        {/* این یک سرویس رایگان و عمومی برای ساخت تصویر(SVG) نمودار فعالیت گیتهابه؛
-            یعنی خودمون API صدا نمی‌زنیم، فقط یک عکس رو از آدرس این سرویس لود می‌کنیم.
-            next/image اینجا استفاده نشده چون این عکس یک SVG داینامیک از یک دامنه‌ی
-            خارجیه که از قبل نمی‌دونیم اندازه‌اش چقدره. */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={`https://ghchart.rshah.org/c778dd/${githubUsername}`}
-          alt={`${githubUsername}'s GitHub contribution graph`}
-          className='mx-auto min-w-[600px]'
-        />
+      <p className='mb-4 text-sm text-gray'>
+        {calendar.totalContributions} contribution در یک سال گذشته
+      </p>
+
+      <div className='flex gap-1 overflow-x-auto  border-gray/20 p-4'>
+        {calendar.weeks.map((week) => (
+          <div
+            key={week.contributionDays[0]?.date}
+            className='flex flex-col gap-1'
+          >
+            {week.contributionDays.map((day) => (
+              <div
+                key={day.date}
+                title={`${day.date}: ${day.contributionCount} contribution`}
+                className={`size-2.5 rounded-sm ${getLevelClass(day.contributionCount)}`}
+              />
+            ))}
+          </div>
+        ))}
       </div>
     </div>
   )

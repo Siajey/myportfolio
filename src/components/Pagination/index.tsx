@@ -19,7 +19,7 @@ export default function Pagination({ currentPage, totalPages, basePath }: Pagina
   const linkFor = (page: number) => `${basePath}?page=${page}`
 
   return (
-    <nav aria-label="Pagination" className="mt-12 flex items-center justify-center gap-2">
+    <nav aria-label="Pagination" className="mt-12 flex flex-wrap items-center justify-center gap-2">
       {currentPage > 1 && (
         <Link
           href={linkFor(currentPage - 1)}

@@ -29,7 +29,10 @@ export default function ExpandableText({ text, className }: ExpandableTextProps)
     <div className={className}>
       <p
         ref={textRef}
-        className={cn('min-h-[3lh] text-sm text-gray', !isExpanded && 'line-clamp-3')}
+        className={cn(
+          'min-h-[3lh] break-words text-sm text-gray',
+          !isExpanded && 'line-clamp-3'
+        )}
       >
         {text}
       </p>

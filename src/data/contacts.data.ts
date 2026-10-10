@@ -1,4 +1,4 @@
-import { Github, Mail, Send } from 'lucide-react'
+import { GitBranch, Mail, Send } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import { socialLinks } from '@/data/social-links.data'
 
@@ -11,7 +11,7 @@ export interface ContactItem {
 
 export const contactsData: ContactItem[] = [
   {
-    icon: Github,
+    icon: GitBranch,
     label: 'GitHub',
     description: 'کد و پروژه‌های من',
     href: socialLinks.github,
@@ -25,6 +25,24 @@ export const contactsData: ContactItem[] = [
   {
     icon: Send,
     label: 'Telegram',
+    description: 'سریع‌ترین راه برای ارتباط گرفتن',
+    href: socialLinks.telegram,
+  },
+  {
+    icon: Send,
+    label: 'Threads',
+    description: 'سریع‌ترین راه برای ارتباط گرفتن',
+    href: socialLinks.telegram,
+  },
+  {
+    icon: Send,
+    label: 'Youtube',
+    description: 'سریع‌ترین راه برای ارتباط گرفتن',
+    href: socialLinks.telegram,
+  },
+  {
+    icon: Send,
+    label: 'Linkedin',
     description: 'سریع‌ترین راه برای ارتباط گرفتن',
     href: socialLinks.telegram,
   },

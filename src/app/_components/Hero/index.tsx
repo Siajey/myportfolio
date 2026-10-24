@@ -21,7 +21,8 @@ export default function Hero() {
           </h1>
 
           <p className='mt-6 text-gray'>
-            He crafts responsive websites where technologies meet creativity
+            He combines modern technologies with thoughtful design to build for
+            the web.
           </p>
 
           <Link
@@ -29,7 +30,7 @@ export default function Hero() {
             className='mt-8 inline-block rounded-md border border-primary/50 px-5 py-2.5 text-sm
               font-medium text-white transition duration-200 hover:bg-primary/10'
           >
-            Contact me !!
+            Contact me
           </Link>
         </div>
 
@@ -50,7 +51,7 @@ export default function Hero() {
             className='relative z-10 mt-4 flex items-center gap-2 rounded-md border
               border-gray/20 bg-background px-4 py-2 text-sm text-gray'
           >
-            <span className='size-2 shrink-0 bg-primary' />
+            <span className='size-2 shrink-0 bg-primary animate-pulse' />
             Currently working on{' '}
             <span className='font-semibold text-white'>Portfolio</span>
           </div>

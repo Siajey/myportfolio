@@ -1,49 +1,64 @@
-import { GitBranch, Mail, Send } from 'lucide-react'
-import type { LucideIcon } from 'lucide-react'
+import type { IconType } from 'react-icons'
+import {
+  FaGithub,
+  FaLinkedinIn,
+  FaTelegram,
+  FaThreads,
+  FaYoutube,
+} from 'react-icons/fa6'
+import { Mail } from 'lucide-react'
 import { socialLinks } from '@/data/social-links.data'
 
 export interface ContactItem {
-  icon: LucideIcon
+  icon: IconType
   label: string
   description: string
   href: string
 }
 
-export const contactsData: ContactItem[] = [
+const allContacts: ContactItem[] = [
   {
-    icon: GitBranch,
+    icon: FaGithub,
     label: 'GitHub',
-    description: 'کد و پروژه‌های من',
+    description: 'Projects I’ve been working on ',
     href: socialLinks.github,
   },
   {
     icon: Mail,
     label: 'Email',
-    description: 'برای همکاری یا هر سوالی پیام بده',
+    description: 'I check emails only for business stuff. ',
     href: socialLinks.email,
   },
   {
-    icon: Send,
+    icon: FaTelegram,
     label: 'Telegram',
-    description: 'سریع‌ترین راه برای ارتباط گرفتن',
+    description:
+      'Telegram is my favorite messenger feel free to reach me there for personal discussions. ',
     href: socialLinks.telegram,
   },
   {
-    icon: Send,
+    icon: FaLinkedinIn,
+    label: 'LinkedIn',
+    description:
+      'I’m working on my connections on this one send me a connection request. ',
+    href: socialLinks.linkedin,
+  },
+  {
+    icon: FaYoutube,
+    label: 'YouTube',
+    description:
+      'I share everything about my job publicly; if you are a beginner, you will find it useful',
+    href: socialLinks.youtube,
+  },
+
+  {
+    icon: FaThreads,
     label: 'Threads',
-    description: 'سریع‌ترین راه برای ارتباط گرفتن',
-    href: socialLinks.telegram,
-  },
-  {
-    icon: Send,
-    label: 'Youtube',
-    description: 'سریع‌ترین راه برای ارتباط گرفتن',
-    href: socialLinks.telegram,
-  },
-  {
-    icon: Send,
-    label: 'Linkedin',
-    description: 'سریع‌ترین راه برای ارتباط گرفتن',
-    href: socialLinks.telegram,
+    description:
+      'I share technical content here, but in shorter form, and occasionally some fun material.',
+    href: socialLinks.threads,
   },
 ]
+
+export const contactsData = allContacts.filter((item) => item.href)
+

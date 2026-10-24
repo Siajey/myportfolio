@@ -1,4 +1,4 @@
-import { GitBranch, Mail, Send } from 'lucide-react'
+import { FaGithub, FaLinkedinIn, FaTelegram } from 'react-icons/fa6'
 import clsx from 'clsx'
 import { socialLinks } from '@/data/social-links.data'
 
@@ -7,9 +7,9 @@ interface SocialSidebarProps {
 }
 
 const items = [
-  { id: 1, name: 'Github', href: socialLinks.github, icon: GitBranch },
-  { id: 2, name: 'Email', href: socialLinks.email, icon: Mail },
-  { id: 3, name: 'Telegram', href: socialLinks.telegram, icon: Send },
+  { id: 1, name: 'Github', href: socialLinks.github, icon: FaGithub },
+  { id: 2, name: 'Email', href: socialLinks.email, icon: FaLinkedinIn },
+  { id: 3, name: 'Telegram', href: socialLinks.telegram, icon: FaTelegram },
 ]
 
 export default function SocialSidebar({ className }: SocialSidebarProps) {
@@ -39,6 +39,3 @@ export default function SocialSidebar({ className }: SocialSidebarProps) {
     </div>
   )
 }
-
-
-

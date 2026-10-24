@@ -7,8 +7,9 @@ export default function Contacts() {
       <SectionHeading title='contacts' />
 
       <p className='mt-6 max-w-2xl text-gray'>
-        اگه پروژه‌ای داری که می‌خوای همکاری کنیم، یا فقط می‌خوای سلام کنی، از
-        هرکدوم از راه‌های ارتباطی باهام در تماس باش.
+        Have a project in mind or looking for a front-end developer to join your
+        team? Feel free to reach out. I’m always open to meaningful
+        opportunities and fully remote roles.
       </p>
 
       <Link
@@ -16,7 +17,7 @@ export default function Contacts() {
         className='mt-8 inline-block rounded-md border border-primary/50 px-5 py-2.5
           text-sm font-medium text-white transition duration-200 hover:bg-primary/10'
       >
-        راه‌های ارتباطی
+        Get in Touch
       </Link>
     </section>
   )

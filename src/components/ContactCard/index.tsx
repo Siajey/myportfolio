@@ -1,8 +1,8 @@
-import type { LucideIcon } from 'lucide-react'
+import type { IconType } from 'react-icons'
 import Link from 'next/link'
 
 interface ContactCardProps {
-  icon: LucideIcon
+  icon: IconType
   label: string
   description: string
   href: string

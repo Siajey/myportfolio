@@ -1,4 +1,10 @@
-import { GitBranch, Mail, Send } from 'lucide-react'
+import {
+  FaGithub,
+  FaLinkedinIn,
+  FaTelegram,
+  FaThreads,
+  FaYoutube,
+} from 'react-icons/fa6'
 import { socialLinks } from '@/data/social-links.data'
 
 export default function Footer() {
@@ -10,7 +16,7 @@ export default function Footer() {
       >
         <div>
           <p className='text-lg font-bold text-white'>Jey</p>
-          <p className='mt-1 text-sm text-gray'>Frontend developer</p>
+          <p className='mt-1 text-sm text-gray'>Frontend developer | Next.js</p>
         </div>
 
         <div className='flex items-center gap-8'>
@@ -20,7 +26,7 @@ export default function Footer() {
             rel='noopener noreferrer'
             className='text-gray transition duration-200 hover:text-primary'
           >
-            <GitBranch className='size-5' />
+            <FaGithub className='size-5' />
           </a>
 
           <a
@@ -29,7 +35,7 @@ export default function Footer() {
             rel='noopener noreferrer'
             className='text-gray transition duration-200 hover:text-primary'
           >
-            <Send className='size-5' />
+            <FaTelegram className='size-5' />
           </a>
 
           <a
@@ -37,7 +43,23 @@ export default function Footer() {
             rel='noopener noreferrer'
             className='text-gray transition duration-200 hover:text-primary'
           >
-            <Mail className='size-5' />
+            <FaLinkedinIn className='size-5' />
+          </a>
+
+          <a
+            href={socialLinks.email}
+            rel='noopener noreferrer'
+            className='text-gray transition duration-200 hover:text-primary'
+          >
+            <FaThreads className='size-5' />
+          </a>
+
+          <a
+            href={socialLinks.email}
+            rel='noopener noreferrer'
+            className='text-gray transition duration-200 hover:text-primary'
+          >
+            <FaYoutube className='size-5' />
           </a>
         </div>
       </div>

@@ -75,7 +75,7 @@ export default function AboutMePage() {
               <h3 className='mb-2 text-sm font-semibold text-white'>
                 {category.title}
               </h3>
-              <p className='text-sm text-gray'>{category.items.join(' ')}</p>
+              <p className='text-sm text-gray'>{category.items.join(' - ')}</p>
             </div>
           ))}
         </div>

@@ -23,7 +23,7 @@ export default async function GithubActivity() {
       <SectionHeading title='github-activity' />
 
       <p className='mb-4 text-sm text-gray'>
-        {calendar.totalContributions} contribution در یک سال گذشته
+        {calendar.totalContributions} Contribution over the past year
       </p>
 
       <div className='flex gap-1 overflow-x-auto  border-gray/20 p-4'>

@@ -14,8 +14,8 @@ export default function ContactsPage() {
       <SectionHeading title='contacts' />
 
       <p className='mt-6 max-w-2xl text-gray'>
-        اگه پروژه‌ای داری که می‌خوای همکاری کنیم، یا فقط می‌خوای سلام کنی، از
-        هرکدوم از راه‌های زیر می‌تونی باهام در ارتباط باشی.
+        From the links below, you can find me this is where I spent most of my
+        time.
       </p>
 
       <div className='mt-12 grid gap-6 sm:grid-cols-3'>

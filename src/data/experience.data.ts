@@ -8,22 +8,24 @@ export interface ExperienceItem {
 export const experienceData: ExperienceItem[] = [
   {
     company: 'Lexa',
-    role: 'Junior Front-End Developer',
-    period: 'May 2025 – Present',
+    role: 'Midlevel Front-End Developer',
+    period: 'May 2024 – Present',
     points: [
-      'توسعه رابط‌های کاربری واکنش‌گرا با React، Next.js و TypeScript',
-      'پیاده‌سازی چیدمان‌های واکنش‌گرا با Tailwind CSS برای دسکتاپ، تبلت و موبایل',
-      'بهبود کارایی اپلیکیشن با Lazy Loading و Code Splitting',
+      'Developed responsive NFT Dashboard using React, Next.js, and TypeScript',
+      'Implement responsive layouts using Tailwind CSS for desktop, tablet, and mobile.',
+      'Improving Web Application Performance with Lazy Loading and Code Splitting',
+      'Develeloped and maintained reusable React components and hooks for efficient development.',
+      'developed SPA webpages with React and Next.js, ensuring smooth navigation and optimal user experience.',
     ],
   },
   {
     company: 'TCM Group',
     role: 'Front-End Developer / Developer Intern',
-    period: 'Jul 2024 – Apr 2025',
+    period: 'Jul 2022 – Apr 2024',
     points: [
-      'تبدیل طراحی UI به کامپوننت‌های قابل‌استفاده‌مجدد React و Next.js',
-      'اتصال اپلیکیشن‌ها به REST API و مدیریت وضعیت‌های اپلیکیشن',
-      'همکاری تیمی با گردش‌کار مبتنی بر Git برای مدیریت کد',
+      'freelance front-end developer for TCM Group, contributing to various web development projects.',
+      'Connecting Web Applications to REST APIs and managing Web Application state',
+      'Team collaboration using a Git-based workflow for code management.',
     ],
   },
 ]

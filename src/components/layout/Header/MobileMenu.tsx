@@ -9,11 +9,12 @@ import { navbarItems } from './navItems'
 export default function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false)
   const pathname = usePathname()
+  const [prevPathname, setPrevPathname] = useState(pathname)
 
-  // Close the mobile menu when the pathname changes
-  useEffect(() => {
+  if (pathname !== prevPathname) {
+    setPrevPathname(pathname)
     setIsOpen(false)
-  }, [pathname])
+  }
 
   //lock and unlock body scroll when the mobile menu is open or closed
   useEffect(() => {

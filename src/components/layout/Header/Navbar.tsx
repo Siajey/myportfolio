@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { navbarItems } from './navItems'
@@ -20,7 +19,7 @@ const Navbar = () => {
             className={clsx(
               'relative ms-2 font-medium transition duration-200 hover:text-gray',
               {
-                '!text-primary': isActive,
+                'text-primary!': isActive,
               },
             )}
           >
@@ -37,3 +36,4 @@ const Navbar = () => {
 }
 
 export default Navbar
+

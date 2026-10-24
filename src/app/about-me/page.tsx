@@ -1,7 +1,7 @@
 import { Download } from 'lucide-react'
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import aboutImage from '@/assets/images/about.png'
+import aboutImage from '@/assets/images/about-me.png'
 import DotGrid from '@/components/ui/DotGrid'
 import SectionHeading from '@/components/ui/SectionHeading'
 import { skillsData } from '@/data/skills.data'
@@ -20,29 +20,24 @@ export default function AboutMePage() {
 
       <div className='grid gap-12 lg:grid-cols-2 lg:items-center'>
         <div>
-          <p className='text-lg font-semibold text-white'>سلام، من جی هستم!</p>
+          <p className='text-lg font-semibold text-white'>more personal</p>
 
           <p className='mt-6 text-gray'>
-            یک توسعه‌دهنده فرانت‌اند خودآموخته هستم که ساکن [شهر خودت] هستم.
-            می‌تونم وب‌سایت‌های واکنش‌گرا رو از صفر بسازم و اون‌ها رو به
-            تجربه‌های کاربری مدرن و کاربرپسند تبدیل کنم.
-          </p>
-
-          <p className='mt-4 text-gray'>
-            تبدیل‌کردن خلاقیت و دانشم به وب‌سایت‌های واقعی، بیش از یک ساله که
-            علاقه اصلی منه. به مشتری‌های مختلف کمک کردم تا حضور آنلاین خودشون رو
-            شکل بدن. همیشه در تلاشم که جدیدترین تکنولوژی‌ها و فریم‌ورک‌ها رو یاد
-            بگیرم.
-          </p>
-
-          <p className='mt-4 text-gray'>
-            در حال حاضر، علاوه بر فرانت‌اند، در حال یادگیری مباحث بک‌اند، نحوه
-            دیپلوی پروژه‌ها، و اصول اولیه امنیت وب هستم تا بتونم پروژه‌ها رو از
-            ابتدا تا انتها خودم مدیریت کنم.
-          </p>
-
-          <p className='mt-4 text-gray'>
-            خارج از کدنویسی هم گیمر هستم.
+            I&apos;m a self-taught front-end developer based in Iran, with
+            Kurdish heritage and a strong passion for technology and continuous
+            learning. I&apos;m naturally curious, empathetic, and open to
+            different perspectives. I enjoy connecting with people, exchanging
+            ideas, and helping others understand complex topics in simple,
+            practical ways. This also inspired me to start creating educational
+            content on YouTube, where I share what I learn with others. For me,
+            growth is a daily process. I believe in learning from challenges,
+            improving my mindset, and focusing on solutions rather than getting
+            stuck on problems. Every new skill I develop strengthens my
+            confidence and motivates me to keep moving forward. Outside of
+            development, I&apos;m an avid gamer who enjoys the challenges and
+            teamwork of online multiplayer games. I see curiosity, persistence,
+            and a willingness to learn as qualities that shape both who I am and
+            the developer I aspire to be.
           </p>
 
           <a
@@ -66,7 +61,7 @@ export default function AboutMePage() {
           <Image
             src={aboutImage}
             alt='Jey portrait'
-            className='relative z-10 w-64 rounded-sm sm:w-80'
+            className='relative z-10'
           />
         </div>
       </div>
